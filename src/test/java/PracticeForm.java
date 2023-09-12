@@ -41,7 +41,7 @@ public class PracticeForm extends TestBase {
                 text(Name+LastName),
                 text(Email),
                 text("Male"),
-                text("8800555353"),
+                text("88005553535"),
                 text("05 March,1955"),
                 text("Computer Science"),
                 text("Sports"),
