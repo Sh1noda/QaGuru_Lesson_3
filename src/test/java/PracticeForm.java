@@ -16,7 +16,7 @@ public class PracticeForm extends TestBase {
         String Name = "Ivan ";
         String LastName = "Jrozny";
         String Email = "practiceFormTest@gmail.com";
-        String Phone = "88005553535";
+        String Phone = "8005553535";
 
         $("#firstName").setValue(Name);
         $("#lastName").setValue(LastName);
@@ -41,7 +41,7 @@ public class PracticeForm extends TestBase {
                 text(Name+LastName),
                 text(Email),
                 text("Male"),
-                text("88005553535"),
+                text("8005553535"),
                 text("05 March,1955"),
                 text("Computer Science"),
                 text("Sports"),
