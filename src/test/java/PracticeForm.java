@@ -9,27 +9,27 @@ public class PracticeForm extends TestBase {
 
     @Test
     void practiceFormTest() {
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
-        String Name = "Ivan ";
-        String LastName = "Jrozny";
-        String Email = "practiceFormTest@gmail.com";
-        String Phone = "8005553535";
+        String name = "Ivan ";
+        String lastName = "Jrozny";
+        String email = "practiceFormTest@gmail.com";
+        String phone = "8005553535";
 
-        $("#firstName").setValue(Name);
-        $("#lastName").setValue(LastName);
-        $("#userEmail").setValue(Email);
+        $("#firstName").setValue(name);
+        $("#lastName").setValue(lastName);
+        $("#userEmail").setValue(email);
         $(".custom-control-label").click();
-        $("#userNumber").setValue(Phone);
+        $("#userNumber").setValue(phone);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("March");
         $(".react-datepicker__year-select").selectOption("1955");
         $(".react-datepicker__day--005").click();
         $("#subjectsInput").setValue("com").pressEnter();
         $("label[for='hobbies-checkbox-1']").click();
-        $("#uploadPicture").uploadFile(new File("src/test/resources/q.jpeg"));
+        $("#uploadPicture").uploadFromClasspath("q.jpeg");
         $("#currentAddress").setValue("Current Address- address");
         $("#state").click();
         $("#react-select-3-input").setValue("Haryana").pressEnter();
@@ -38,8 +38,8 @@ public class PracticeForm extends TestBase {
         $("#submit").click();
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(
-                text(Name+LastName),
-                text(Email),
+                text(name+lastName),
+                text(email),
                 text("Male"),
                 text("8005553535"),
                 text("05 March,1955"),
